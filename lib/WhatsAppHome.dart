@@ -26,10 +26,12 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("WhatsApp"),
-        elevation: 0.7,
+        elevation: 5,
         bottom: new TabBar(
+            isScrollable: true,
             controller: _tabController,
             indicatorColor: Colors.white,
+            labelPadding: EdgeInsets.symmetric(horizontal: 20.0),
             tabs: <Widget>[
               new Tab(icon: new Icon(Icons.camera_alt)),
               new Tab(text: "CHATS"),

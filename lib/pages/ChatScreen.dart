@@ -14,10 +14,13 @@ class _ChatScreenState extends State<ChatScreen> {
       itemBuilder: (context, i) => new Column(
         children: <Widget>[
           new Divider(
-            height: 10.0,
+            height: 7.0,
+            indent: 77,
+            endIndent: 10,
           ),
           new ListTile(
             leading: new CircleAvatar(
+              radius: 27,
               foregroundColor: Theme.of(context).primaryColor,
               backgroundColor: Colors.grey,
               backgroundImage: new NetworkImage(dummyData[i].avatarUrl),
@@ -27,11 +30,12 @@ class _ChatScreenState extends State<ChatScreen> {
               children: <Widget>[
                 new Text(
                   dummyData[i].name,
-                  style: new TextStyle(fontWeight: FontWeight.bold),
+                  style: new TextStyle(
+                      fontWeight: FontWeight.w500, fontSize: 17.0),
                 ),
                 new Text(
                   dummyData[i].time,
-                  style: new TextStyle(color: Colors.grey, fontSize: 14.0),
+                  style: new TextStyle(color: Colors.grey, fontSize: 12.0),
                 ),
               ],
             ),
@@ -39,7 +43,7 @@ class _ChatScreenState extends State<ChatScreen> {
               padding: const EdgeInsets.only(top: 5.0),
               child: new Text(
                 dummyData[i].message,
-                style: new TextStyle(color: Colors.grey, fontSize: 15.0),
+                style: new TextStyle(color: Colors.grey[700], fontSize: 14.0),
               ),
             ),
           )
